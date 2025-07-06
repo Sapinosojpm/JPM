@@ -1,14 +1,14 @@
 import React from 'react'
-
+import assets from '../assets/assets'
 const Navigation = ({ activeSection, isMenuOpen, setIsMenuOpen, scrollToSection }) => {
   return (
     <nav className="navbar">
       <div className="nav-container">
         <div className="nav-logo">
-          <span className="logo-text">JPM</span>
+          <span className="logo-text"><img src={assets.logo} alt="logo" /></span>
         </div>
         
-        <div className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
+        <div id="nav-menu" className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
           <a 
             href="#home" 
             className={`nav-link ${activeSection === 'home' ? 'active' : ''}`}

@@ -15,25 +15,25 @@ const Contact = ({ handleFormSubmit, scrollToSection }) => {
             <div className="contact-details">
               <div className="contact-item">
                 <span className="contact-label">Email:</span>
-                <a href="mailto:hello@johndoe.com" className="contact-link">hello@johndoe.com</a>
+                <a href="https://mail.google.com/mail/u/0/#inbox" className="contact-link">sapinosojohnpaulmille@gmail.com</a>
               </div>
               <div className="contact-item">
                 <span className="contact-label">Phone:</span>
-                <a href="tel:+1234567890" className="contact-link">+1 (234) 567-890</a>
+                <a href="tel:+1234567890" className="contact-link">+639682832173</a>
               </div>
               <div className="contact-item">
                 <span className="contact-label">Location:</span>
-                <span className="contact-text">San Francisco, CA</span>
+                <span className="contact-text">Camarines Sur, Philippines</span>
               </div>
-              <div className="contact-item">
+              {/* <div className="contact-item">
                 <span className="contact-label">Web3 ID:</span>
                 <span className="contact-text">763acd72-d6a8-4af2-b2cc-78bc08602ef5</span>
-              </div>
+              </div> */}
             </div>
             <div className="social-links">
-              <a href="#" className="social-link">GitHub</a>
-              <a href="#" className="social-link">LinkedIn</a>
-              <a href="#" className="social-link">Twitter</a>
+              <a href="https://github.com/Sapinosojpm" className="social-link">GitHub</a>
+              <a href="https://www.linkedin.com/in/john-paul-mille-sapinoso-474a0b276/" className="social-link">LinkedIn</a>
+              <a href="https://www.facebook.com/johnpaulmille.sapinoso.7" className="social-link">Facebook</a>
             </div>
           </div>
           <form className="contact-form" onSubmit={handleFormSubmit}>

@@ -1,4 +1,5 @@
 import React from 'react'
+import assets from '../assets/assets'
 
 const Projects = () => {
   const projects = [
@@ -7,14 +8,16 @@ const Projects = () => {
       title: "E-Commerce Platform",
       description: "A full-stack e-commerce solution with React frontend and Node.js backend.",
       tech: ["React", "Node.js", "MongoDB"],
-      image: "Project 1"
+      image: "Project 1",
+      
     },
     {
       id: 2,
-      title: "Task Management App",
-      description: "A collaborative task management application with real-time updates.",
-      tech: ["Vue.js", "Firebase", "Tailwind"],
-      image: "Project 2"
+      title: "Printastic Studio",
+      description: "Printastic Studio is your go-to online printing platform, designed to turn your creative ideas into stunning physical products. Whether it’s for business branding, personal gifts, or event merchandise.",
+      tech: ["React", "Tailwind"],
+      image: assets.printastic,
+      link: "https://printastic-studio.vercel.app"
     },
     {
       id: 3,
@@ -33,7 +36,15 @@ const Projects = () => {
           {projects.map((project) => (
             <div key={project.id} className="project-card">
               <div className="project-image">
-                <div className="image-placeholder">{project.image}</div>
+                {project.image && typeof project.image === 'string' && project.image.startsWith('data') === false && project.image.endsWith('.png') ? (
+                  <img src={project.image} alt={project.title} />
+                ) : project.image && typeof project.image === 'string' && (project.image.startsWith('http') || project.image.endsWith('.jpg') || project.image.endsWith('.jpeg') || project.image.endsWith('.avif')) ? (
+                  <img src={project.image} alt={project.title} />
+                ) : project.image && typeof project.image === 'string' && project.image !== '' ? (
+                  <div className="image-placeholder">{project.image}</div>
+                ) : (
+                  <div className="image-placeholder">No Image</div>
+                )}
               </div>
               <div className="project-content">
                 <h3 className="project-title">{project.title}</h3>
@@ -46,8 +57,9 @@ const Projects = () => {
                   ))}
                 </div>
                 <div className="project-links">
-                  <a href="#" className="project-link">Live Demo</a>
-                  <a href="#" className="project-link">GitHub</a>
+                  {project.link && (
+                    <a href={project.link} className="project-link" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                  )}
                 </div>
               </div>
             </div>

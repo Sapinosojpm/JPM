@@ -6,8 +6,8 @@ const Hero = ({ scrollToSection }) => {
       <div className="hero-content">
         <h1 className="hero-title">
           <span className="greeting">Hello, I'm</span>
-          <span className="name">John Doe</span>
-          <span className="title">Full Stack Developer</span>
+          <span className="name">John Paul Mille</span>
+          <span className="title">Full-Stack Developer</span>
         </h1>
         <p className="hero-description">
           I create beautiful, functional, and user-centered digital experiences.

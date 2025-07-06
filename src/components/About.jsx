@@ -1,4 +1,5 @@
 import React from 'react'
+import assets from '../assets/assets'
 
 const About = () => {
   return (
@@ -8,7 +9,7 @@ const About = () => {
         <div className="about-content">
           <div className="about-text">
             <p>
-              I'm a passionate full-stack developer with 5+ years of experience creating 
+              I'm a passionate full-stack developer with 1+ years of experience creating 
               innovative web applications. I specialize in React, Node.js, and modern 
               web technologies.
             </p>
@@ -19,22 +20,22 @@ const About = () => {
             </p>
             <div className="about-stats">
               <div className="stat">
-                <span className="stat-number">50+</span>
+                <span className="stat-number">5+</span>
                 <span className="stat-label">Projects Completed</span>
               </div>
               <div className="stat">
-                <span className="stat-number">5+</span>
+                <span className="stat-number">1+</span>
                 <span className="stat-label">Years Experience</span>
               </div>
               <div className="stat">
-                <span className="stat-number">20+</span>
+                <span className="stat-number">5+</span>
                 <span className="stat-label">Happy Clients</span>
               </div>
             </div>
           </div>
           <div className="about-image">
             <div className="image-placeholder">
-              <span>Your Photo</span>
+              <img src={assets.myPic} alt="My Photo" />
             </div>
           </div>
         </div>
